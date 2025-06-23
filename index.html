@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Delights Candy Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div id="auth-container" class="container">
+        <div class="auth-box">
+            <h1>Welcome to Sweet Delights</h1>
+            <div id="login-form">
+                <h2>Login</h2>
+                <input type="text" id="login-username" placeholder="Username">
+                <input type="password" id="login-password" placeholder="Password">
+                <button id="login-btn">Login</button>
+                <p>Don't have an account? <a href="#" id="show-register">Register</a></p>
+            </div>
+            <div id="register-form" style="display: none;">
+                <h2>Register</h2>
+                <input type="text" id="register-username" placeholder="Username">
+                <input type="password" id="register-password" placeholder="Password">
+                <input type="password" id="register-confirm" placeholder="Confirm Password">
+                <button id="register-btn">Register</button>
+                <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="store-container" class="container" style="display: none;">
+        <header>
+            <h1>Sweet Delights Candy Store</h1>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </header>
+        
+        <div class="products">
+            <div class="product-card">
+                <img src="https://dafeiraaobaile.com.br/wp-content/uploads/2023/02/Dafeiraaobaile-Novembro-15.jpg" alt="Brigadeiro">
+                <h3>Brigadeiro</h3>
+                <p>Delicioso Doce de Chocolate Brasileiro</p>
+                <p class="price">$5.99</p>
+                <button class="add-to-cart" data-id="1" data-name="Brigadeiro" data-price="3.99">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://i.ytimg.com/vi/nGS6kGtO4Q4/maxresdefault.jpg" alt="Dindin">
+                <h3>Dindin Gourmet</h3>
+                <p>Refrescante e Deliciosa Sobremesa no Saquinho</p>
+                <p class="price">$9.99</p>
+                <button class="add-to-cart" data-id="2" data-name="Dindin" data-price="2.99">Add to Cart</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://media.istockphoto.com/id/678197488/pt/foto/acai-bowl.jpg?s=612x612&w=0&k=20&c=bIuEiEoTk3q8ZBxWh1hdXE54j1loiSYWO63ze9NIMns=" alt="Açaí">
+                <h3>Açaí</h3>
+                <p>Delicioso Açaí com Complementos a sua Escolha</p>
+                <p class="price">$16.99</p>
+                <button class="add-to-cart" data-id="3" data-name="Açaí Bowl" data-price="5.99">Add to Cart</button>
+            </div>
+        </div>
+        
+        <div id="cart-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Your Cart</h2>
+                <div id="cart-items"></div>
+                <div id="cart-total">
+                    <h3>Total: $<span id="total-amount">0.00</span></h3>
+                    <button id="checkout-btn">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
